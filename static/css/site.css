@@ -3,8 +3,7 @@
 body {
     font-family: Times, sans-serif;
     max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: var(--m);
     text-align: center;
 }
 @font-face {
@@ -16,24 +15,20 @@ body {
 }
 h1 {
     font-family: 'Constanz', Times, sans-serif;
-    font-size: var(--xl);
-    margin-bottom: 5px;
+    font-size: var(--xxl);
+    margin-bottom: var(--xl);
+    font-weight: bold;
 }
 .subtitle {
     color: #00692a;
-    margin-bottom: 30px;
+    margin-bottom: var(--xl);
 }
-.button {
-    display: block;
-    padding: 15px;
-    margin: 10px 0;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
+img {
+    border: 5px solid #000;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: var(--m);
 }
-.uno {
-    background-image: url('/static/img/logo_uno_rect.jpg');
-    background-size: cover;
-    background-position: center;
+img:hover {
+    transform: scale(1.1);
 }
