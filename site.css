@@ -1,0 +1,26 @@
+@import url('gold.css') layer(reset, default);
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.subtitle {
+    color: #00692a;
+    margin-bottom: 30px;
+}
+.button {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
