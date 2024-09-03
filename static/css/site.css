@@ -1,21 +1,28 @@
 @import 'gold.css' layer(reset);
 @import 'gold.css' layer(default);
 
-body {
-    font-family: Times, sans-serif;
-    max-width: 610px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--m);
-}
-
 @font-face {
     font-family: 'Constanz';
     src: url('/static/font/ConstanzeInitials.woff2') format('woff2'),
          url('/static/font/ConstanzeInitials.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+body {
+    font-family: Times, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 610px;
+    padding: var(--m);
 }
 
 h1 {
@@ -26,12 +33,27 @@ h1 {
 }
 
 img {
-    border: 3px solid #000;
+    border: 3px solid black;
     border-radius: 10%;
-    transition: transform 0.8s ease-in-out;
-    padding-bottom: var(--m);
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: var(--m);
     max-width: 100%;
 }
 img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    img {
+        border: white
+    }
 }
