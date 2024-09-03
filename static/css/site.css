@@ -12,15 +12,16 @@
 body {
     font-family: Times, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     max-width: 610px;
     padding: var(--m);
 }
@@ -54,6 +55,6 @@ img:hover {
     }
 
     img {
-        border: white
+        border-color: white;
     }
 }
