@@ -1,0 +1,39 @@
+@import url('gold.css') layer(reset, default);
+
+body {
+    font-family: Times, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+@font-face {
+    font-family: 'Constanz';
+    src: url('/static/font/ConstanzeInitials.woff2') format('woff2'),
+         url('/static/font/ConstanzeInitials.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    font-family: 'Constanz', Times, sans-serif;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.subtitle {
+    color: #00692a;
+    margin-bottom: 30px;
+}
+.button {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.uno {
+    background-image: url('/static/img/logo_uno_rect.jpg');
+    background-size: cover;
+    background-position: center;
+}
