@@ -11,11 +11,18 @@
 
 :root {
     --light: 1;
+    --phone: 0;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --light: 0;
+    }
+}
+
+@media (max-width: 610px) {
+    :root {
+        --phone: 1;
     }
 }
 
@@ -26,7 +33,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: hsl(0, 0%, var(--light)*100%);
+    background-color: hsl(0, 0%, calc(var(--light)*100%));
 }
 
 main {
@@ -34,16 +41,22 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     max-width: 610px;
     padding: var(--m);
+    background: url("/static/img/bg.svg");
+    background-size: contain;
+    background-repeat: repeat;
+    filter: invert(var(--light));
 }
 
 h1 {
     font-family: 'Constanz', Times, sans-serif;
-    font-size: var(--xxl);
+    font-size: var(--xl);
+    margin-top: calc((1 - var(--phone)) * var(--xl));
     margin-bottom: var(--xl);
     font-weight: normal;
-    color: hsl(0, 0%, var(--light)*100%);
+    color: hsl(0, 0%, calc(var(--light)*100%));
 }
 
 img {
@@ -51,7 +64,7 @@ img {
     border-radius: 10%;
     transition: transform 0.5s ease-in-out;
     margin-bottom: var(--m);
-    border-color: hsl(0, 0%, var(--light)*100%);
+    border-color: hsl(0, 0%, calc(var(--light)*100%));
 }
 img:hover {
     transform: scale(1.02);
