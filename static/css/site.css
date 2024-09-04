@@ -72,7 +72,6 @@ h1 {
     color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
     background-color: hsl(0, 0%, calc(var(--light) * 100%));
     animation: rainbow-shadow 5s infinite ease-in-out;
-    font-size: calc(var(--phone) * var(--m)) + calc((1 - var(--phone)) * var(--xl));
     font-size: calc(min(7ch, 10vw));
 }
 
