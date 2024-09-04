@@ -51,7 +51,7 @@ body {
 }
 
 @keyframes opacity {
-    50% { opacity: 0.5; }
+    50% { opacity: 0.9; }
 }
 
 .background object {
@@ -73,7 +73,7 @@ main {
 h1 {
     font-family: 'Constanz', Times, sans-serif;
     margin-top: calc((1 - var(--phone)) * var(--xl));
-    margin-bottom: var(--xl);
+    margin-bottom: var(--xxl);
     color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
     animation: rainbow-shadow 5s infinite ease-in-out;
     font-size: calc(var(--phone) * var(--m)) + calc((1 - var(--phone)) * var(--xl));
