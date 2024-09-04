@@ -1,5 +1,4 @@
-@import url('gold.css') layer(reset);
-@import url('gold.css') layer(default);
+@import url('gold.css') layer(gold);
 
 @font-face {
     font-family: 'Constanz';
@@ -50,10 +49,6 @@ body {
     animation: opacity 5s infinite ease-in-out;
 }
 
-@keyframes opacity {
-    50% { opacity: 0.9; }
-}
-
 .background object {
     height: calc(max(100vw, 100vh));
     width: calc(max(100vw, 100vh));
@@ -80,14 +75,6 @@ h1 {
     font-size: calc(min(7ch, 10vw));
 }
 
-@keyframes rainbow-shadow {
-    0% { filter: drop-shadow(2px 2px 2px white); }
-    25% { filter: drop-shadow(2px 2px 2px red); }
-    50% { filter: drop-shadow(2px 2px 2px blue); }
-    75% { filter: drop-shadow(2px 2px 2px green); }
-    100% { filter: drop-shadow(2px 2px 2px white); }
-}
-
 img {
     border: 3px solid black;
     border-radius: 10%;
@@ -98,4 +85,15 @@ img {
 img:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px #fff;
+}
+
+@keyframes opacity {
+    50% { opacity: 0.9; }
+}
+@keyframes rainbow-shadow {
+    0% { filter: drop-shadow(2px 2px 2px white); }
+    25% { filter: drop-shadow(2px 2px 2px red); }
+    50% { filter: drop-shadow(2px 2px 2px blue); }
+    75% { filter: drop-shadow(2px 2px 2px green); }
+    100% { filter: drop-shadow(2px 2px 2px white); }
 }
