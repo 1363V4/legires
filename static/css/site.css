@@ -46,7 +46,7 @@ body {
     overflow: hidden;
 }
 
-.pusling {
+.pulsing {
     animation: opacity 5s infinite ease-in-out;
 }
 
