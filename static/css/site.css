@@ -1,5 +1,5 @@
-@import 'gold.css' layer(reset);
-@import 'gold.css' layer(default);
+@import url('gold.css') layer(reset);
+@import url('gold.css') layer(default);
 
 @font-face {
     font-family: 'Constanz';
