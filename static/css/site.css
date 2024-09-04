@@ -70,6 +70,7 @@ h1 {
     margin-top: calc((1 - var(--phone)) * var(--xl));
     margin-bottom: var(--xxl);
     color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
+    background-color: hsl(0, 0%, calc(var(--light) * 100%));
     animation: rainbow-shadow 5s infinite ease-in-out;
     font-size: calc(var(--phone) * var(--m)) + calc((1 - var(--phone)) * var(--xl));
     font-size: calc(min(7ch, 10vw));
@@ -88,11 +89,6 @@ img:hover {
 }
 
 .unreleased {
-    position: relative;
-}
-
-.unreleased::after {
-    content: "to be released";
     position: absolute;
     top: 0;
     left: 0;
@@ -104,6 +100,7 @@ img:hover {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+    content: "to be released";
 }
 
 @keyframes opacity {
