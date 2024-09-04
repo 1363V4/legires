@@ -32,7 +32,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
 }
 
@@ -66,6 +67,7 @@ h1 {
     margin-bottom: var(--xl);
     color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
     filter: drop-shadow(2px 2px 2px);
+    font-size: calc(var(--phone) * var(--m)) + calc((1 - var(--phone)) * var(--xl));
 }
 
 img {
