@@ -67,9 +67,17 @@ h1 {
     margin-top: calc((1 - var(--phone)) * var(--xl));
     margin-bottom: var(--xl);
     color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
-    filter: drop-shadow(2px 2px 2px);
+    animation: rainbow-shadow 5s infinite;
     font-size: calc(var(--phone) * var(--m)) + calc((1 - var(--phone)) * var(--xl));
-    font-size: calc(minmax(5ch, 10vw));
+    font-size: calc(min(7ch, 10vw));
+}
+
+@keyframes rainbow-shadow {
+    0% { filter: drop-shadow(2px 2px 2px white); }
+    25% { filter: drop-shadow(2px 2px 2px red); }
+    50% { filter: drop-shadow(2px 2px 2px blue); }
+    75% { filter: drop-shadow(2px 2px 2px green); }
+    100% { filter: drop-shadow(2px 2px 2px white); }
 }
 
 img {
