@@ -46,7 +46,7 @@ body {
 }
 
 .pulsing {
-    animation: opacity 5s infinite ease-in-out;
+    animation: opacity 1s infinite ease-in-out;
 }
 
 .background object {
