@@ -42,7 +42,11 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    filter: invert(var(--light));
+    filter: invert(calc(1 - var(--light)));
+}
+
+.background svg {
+    height: 100vh;
 }
 
 main {
