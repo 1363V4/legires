@@ -44,6 +44,9 @@ body {
     left: 0;
     filter: invert(calc(1 - var(--light))) drop-shadow(2px 2px 2px hsl(0, 0%, calc(var(--light) * 100%)));
     overflow: hidden;
+}
+
+.pusling {
     animation: opacity 5s infinite ease-in-out;
 }
 
@@ -94,4 +97,5 @@ img {
 }
 img:hover {
     transform: scale(1.02);
+    opacity: 1;
 }
