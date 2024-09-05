@@ -73,6 +73,7 @@ h1 {
     animation: rainbow-shadow var(--t-l) infinite ease-in-out;
     font-size: calc(min(7ch, 10vw));
     cursor: pointer;
+    font-weight: normal;
 }
 
 img {
