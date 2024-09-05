@@ -46,7 +46,7 @@ body {
 }
 
 .pulsing {
-    animation: opacity 1s infinite ease-in-out;
+    animation: opacity var(--t) infinite ease-in-out;
 }
 
 .background object {
@@ -68,12 +68,11 @@ main {
 
 h1 {
     font-family: 'Constanz', Times, sans-serif;
-    margin-top: calc((1 - var(--phone)) * var(--xl));
-    margin-bottom: var(--xxl);
     color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
     background-color: hsl(0, 0%, calc(var(--light) * 100%));
-    animation: rainbow-shadow 5s infinite ease-in-out;
+    animation: rainbow-shadow var(--t-l) infinite ease-in-out;
     font-size: calc(min(7ch, 10vw));
+    cursor: pointer;
 }
 
 img {
@@ -93,8 +92,8 @@ img:hover {
 }
 @keyframes rainbow-shadow {
     0% { filter: drop-shadow(2px 2px 2px white); }
-    25% { filter: drop-shadow(2px 2px 2px red); }
-    50% { filter: drop-shadow(2px 2px 2px blue); }
-    75% { filter: drop-shadow(2px 2px 2px green); }
+    25% { filter: drop-shadow(-2px 2px 2px red); }
+    50% { filter: drop-shadow(-2px -2px 2px blue); }
+    75% { filter: drop-shadow(2px -2px 2px green); }
     100% { filter: drop-shadow(2px 2px 2px white); }
 }

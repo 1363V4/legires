@@ -15,5 +15,12 @@
     <main>
         <h1>legires.fr</h1>
     </main>
+    <script>
+        document.querySelector('h1').addEventListener('click', () => {
+            const root = document.documentElement;
+            const currentLight = getComputedStyle(root).getPropertyValue('--light').trim();
+            root.style.setProperty('--light', currentLight === 'true' ? 'false' : 'true');
+        });
+    </script>
 </body>
 </html>
