@@ -6,21 +6,176 @@
     <link rel="stylesheet" href="static/css/site.css">
     <meta name="twitter:image" content="https://i.kym-cdn.com/photos/images/original/002/840/212/c63.png">
     <link rel="icon" href="static/img/favicon.svg" type="image/svg+xml">
-    <title>legires</title>
+    <title>legires.fr</title>
+    <script src="static/js/gold.js"></script>
 </head>
 <body>
-    <div class="background pulsing">
-        <object type="image/svg+xml" data="/static/img/bg.svg"></object>
-    </div>
+    <header>
+        <p id="tab">
+            legires.html
+        </p>
+    </header>
     <main>
-        <h1>legires.fr</h1>
+        <div id="lines">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+            <p>9</p>
+            <p>10</p>
+            <p>11</p>
+            <p>12</p>
+            <p>13</p>
+            <p>14</p>
+            <p>15</p>
+            <p>16</p>
+            <p>17</p>
+            <p>18</p>
+            <p>19</p>
+            <p>20</p>
+            <p>21</p>
+            <p>22</p>
+            <p>23</p>
+            <p>24</p>
+            <p>25</p>
+            <p>26</p>
+            <p>27</p>
+            <p>28</p>
+            <p>29</p>
+        </div>
+        <div id="content">
+            <p>
+                <span class="grey">&lt;</span>
+                <span class="blue">!DOCTYPE </span>
+                <span class="purple">html</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p>
+                <span class="grey">&lt;</span>
+                <span class="blue">html </span>
+                <span class="purple">lang="fr"</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-1">
+                <span class="grey">&lt;</span>
+                <span class="blue">head</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <div id="ink" class="indent-2">
+                <img id="nura" src="static/img/head.PNG">
+            </div>
+            <hr>
+            <p class="indent-1">
+                <span class="grey">&lt;/</span>
+                <span class="blue">head</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-1">
+                <span class="grey">&lt;</span>
+                <span class="blue">body</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-2">
+                <span class="grey">&lt;</span>
+                <span class="blue">h1</span>
+                <span class="grey">&gt;</span>
+                <span class="white">legires</span>
+                <span class="grey">&lt;/</span>
+                <span class="blue">h1</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-2">
+                <span class="grey">&lt;</span>
+                <span class="blue">p</span>
+                <span class="grey">&gt;</span>
+                <span class="white">webdev</span>
+                <span class="grey">&lt;/</span>
+                <span class="blue">p</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-2">
+                <span class="grey">&lt;</span>
+                <span class="blue">style</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-3">
+                <span class="green">css </span>
+                <span class="yellow">{</span>
+            </p>
+            <hr>
+            <p class="indent-4">
+                <span class="blue"><a href="https://css.gold">css.gold</a></span>
+                <span class="white">: </span>
+                <span class="pink">a modular stylesheet based on the golden ratio</span>
+            </p>
+            <hr>
+            <p class="indent-3">
+                <span class="yellow">}</span>
+            </p>
+            <hr>
+            <p class="indent-2">
+                <span class="grey">&lt;/</span>
+                <span class="blue">style</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-2">
+                <span class="grey">&lt;</span>
+                <span class="blue">script</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-3">
+                <span class="white"><a href="https://1363v4.github.io/claudio/">claudio.<span class="yellow">js</span></a></span>
+                <span class="blue">()</span>
+                <span class="white">;</span>
+            </p>
+            <hr>
+            <p class="indent-3">
+                <span class="white">console.</span>
+                <span class="yellow">log</span>
+                <span class="blue">(</span>
+                <span class="pink">'lightweight js library to add sounds to html elements'</span>
+                <span class="blue">)</span>
+                <span class="grey">;</span>
+            </p>
+            <hr>
+            <p class="indent-2">
+                <span class="grey">&lt;/</span>
+                <span class="blue">script</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p class="indent-1">
+                <span class="grey">&lt;/</span>
+                <span class="blue">body</span>
+                <span class="grey">&gt;</span>
+            </p>
+            <hr>
+            <p>
+                <span class="grey">&lt;/</span>
+                <span class="blue">html</span>
+                <span class="grey">&gt;</span>
+            </p>
+        </div>
     </main>
-    <script>
-        document.querySelector('h1').addEventListener('click', () => {
-            const root = document.documentElement;
-            const currentLight = getComputedStyle(root).getPropertyValue('--light').trim();
-            root.style.setProperty('--light', currentLight === '1' ? '0' : '1');
-        });
-    </script>
+    <footer>
+        <a href="https://x.com/merelyacat">
+            <img src="static/img/twitter.svg">
+        </a>
+    </footer>
+    <script src="static/js/site.js"></script>
 </body>
 </html>

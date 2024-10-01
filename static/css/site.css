@@ -1,16 +1,17 @@
 @import url('gold.css') layer(gold);
 
-@font-face {
-    font-family: 'Constanz';
-    src: url('/static/font/ConstanzeInitials.woff2') format('woff2'),
-         url('/static/font/ConstanzeInitials.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 :root {
     --light: 1;
     --phone: 0;
+    --color-bg: #181818;
+    --color-white: #D6D6DD;
+    --color-grey: #898982;
+    --color-pink: #DD94DD;
+    --color-blue: #96C2FF;
+    --color-blue-deep: #2A72F1;
+    --color-purple: #AE9FFC;
+    --color-green: #91D5C5;
+    --color-yellow: #F6D803;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,75 +27,143 @@
 }
 
 body {
-    font-family: Times, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 100vw;
     min-height: 100vh;
-    background-color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
+    font-family: monospace;
+    color: var(--color-white);
+    background-color: var(--color-bg);
+    padding-top: 1rem;
 }
 
-.background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    filter: invert(calc(1 - var(--light))) drop-shadow(2px 2px 2px hsl(0, 0%, calc(var(--light) * 100%)));
-    overflow: hidden;
+header {
+    border-bottom: 1px solid var(--color-grey);
 }
 
-.pulsing {
-    animation: opacity var(--t) infinite ease-in-out;
-}
-
-.background object {
-    height: calc(max(100vw, 100vh));
-    width: calc(max(100vw, 100vh));
+#tab {
+    position: relative;
+    top: 1px;
+    width: min-content;
+    color: var(--color-blue-deep);
+    padding: 10px;
+    border-top: 2px solid var(--color-grey);
+    border-right: 1px solid var(--color-grey);
+    border-bottom: 2px solid var(--color-bg);    
 }
 
 main {
-    z-index: 1;
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    padding-top: 0.5rem;
+}
+
+#lines {
+    text-align: right;
+    padding-left: 1rem;
+}
+
+#content {
+    height: min-content;
+    overflow-x: auto;
+}
+
+#content p {
+    display: inline-flex;
+    flex-wrap: wrap;
+    white-space: pre;
+}
+
+hr {
+    border: none;
+}
+
+.blue {
+    color: var(--color-blue);
+}
+.purple {
+    color: var(--color-purple);
+}
+.grey {
+    color: var(--color-grey);
+}
+.pink {
+    color: var(--color-pink);
+}
+.white {
+    color: var(--color-white);
+}
+.green {
+    color: var(--color-green);
+}
+.yellow {
+    color: var(--color-yellow);
+}
+
+.indent-1 {
+    margin-left: 2rem;
+}
+.indent-2 {
+    margin-left: 4rem;
+}
+.indent-3 {
+    margin-left: 6rem;
+}
+.indent-4 {
+    margin-left: 8rem;
+}
+
+#nura {
+    height: 0rem;
+    width: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--color-blue-deep);
+}
+
+#ink {
+    width: fit-content;
+    position: relative;
+}
+
+#ink::after {
+    opacity: 0.2;
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-image: url('../img/splash.svg');
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    filter: blur(3px);
+    background-color: #aaaaaa;
+    background-position-y: 0px;
+}
+
+#ink:hover:after {
+    opacity: 1;
+    animation: flames 15s infinite linear;
+}
+
+@keyframes flames {
+    100% {background-position-y: -666rem;}
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    max-width: 444px;
-    padding: var(--m);
+    opacity: 0.3;
+    padding: 1rem;
 }
 
-h1 {
-    font-family: 'Constanz', Times, sans-serif;
-    color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
-    background-color: hsl(0, 0%, calc(var(--light) * 100%));
-    animation: rainbow-shadow var(--t-l) infinite ease-in-out;
-    font-size: calc(min(7ch, 10vw));
-    cursor: pointer;
-    font-weight: normal;
-}
-
-img {
-    border: 3px solid black;
-    border-radius: 10%;
-    transition: transform 0.5s ease-in-out;
-    margin-bottom: var(--m);
-    border-color: hsl(0, 0%, calc((1 - var(--light)) * 100%));
-}
-img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 10px #fff;
-}
-
-@keyframes opacity {
-    50% { opacity: 0.9; }
-}
-@keyframes rainbow-shadow {
-    0% { filter: drop-shadow(2px 2px 2px white); }
-    25% { filter: drop-shadow(-2px 2px 2px red); }
-    50% { filter: drop-shadow(-2px -2px 2px blue); }
-    75% { filter: drop-shadow(2px -2px 2px green); }
-    100% { filter: drop-shadow(2px 2px 2px white); }
+footer img {
+    width: 2em;
 }
