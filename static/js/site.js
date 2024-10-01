@@ -4,4 +4,5 @@ document.addEventListener('DOMContentLoaded', function() {
     var content = $('#content');
     var heightDifference = lines.offsetHeight - content.offsetHeight;
     img.style.height = heightDifference + 'px';
+    img.style.width = heightDifference + 'px';
 });

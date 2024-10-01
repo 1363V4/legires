@@ -1,8 +1,7 @@
 @import url('gold.css') layer(gold);
 
 :root {
-    --light: 1;
-    --phone: 0;
+    --light: 0;
     --color-bg: #181818;
     --color-white: #D6D6DD;
     --color-grey: #898982;
@@ -14,21 +13,29 @@
     --color-yellow: #F6D803;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
-        --light: 0;
+        --light: 1;
+        --color-white: #181818;
+        --color-bg: #D6D6DD;
+        --color-grey: #636360;
+        --color-pink: #dd7fdd;
+        --color-blue: #569dff;
+        --color-blue-deep: #2A72F1;
+        --color-purple: #6e51ff;
+        --color-green: #1d715e;
+        --color-yellow: #7e7003;
     }
 }
 
-@media (max-width: 610px) {
-    :root {
-        --phone: 1;
-    }
+@font-face {
+    font-family: "Inconsolata";
+    src: url("../fonts/Inconsolata-Regular.ttf");
 }
 
 body {
     min-height: 100vh;
-    font-family: monospace;
+    font-family: monospace, "Inconsolata";
     color: var(--color-white);
     background-color: var(--color-bg);
     padding-top: 1rem;
