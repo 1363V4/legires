@@ -172,5 +172,10 @@ footer {
 }
 
 footer img {
-    width: 2em;
+    width: 1.5em;
+    animation: invert-color 6s infinite linear;
+}
+
+@keyframes invert-color {
+    50% {filter: invert(100%);}
 }
