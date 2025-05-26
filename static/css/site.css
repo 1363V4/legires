@@ -39,6 +39,7 @@ body {
     color: var(--color-white);
     background-color: var(--color-bg);
     padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 header {
