@@ -43,10 +43,11 @@ body {
 }
 
 header {
+    display: flex;
     border-bottom: 1px solid var(--color-grey);
 }
 
-#tab {
+.tab {
     position: relative;
     top: 1px;
     width: min-content;
@@ -54,7 +55,15 @@ header {
     padding: 10px;
     border-top: 2px solid var(--color-grey);
     border-right: 1px solid var(--color-grey);
-    border-bottom: 2px solid var(--color-bg);    
+    border-bottom: 2px solid var(--color-bg);   
+    &[inactive] {
+        color: var(--color-grey);
+        border-bottom: transparent;
+        opacity: .7;
+        &:hover {
+            color: var(--color-blue-deep)
+        }
+    }
 }
 
 main {
