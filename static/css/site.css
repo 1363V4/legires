@@ -146,6 +146,7 @@ a:hover {
 #ink {
     width: fit-content;
     position: relative;
+    cursor: none;
 }
 
 #ink::after {
