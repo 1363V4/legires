@@ -164,7 +164,7 @@ a:hover {
 
 #ink:hover:after {
     opacity: 1;
-    animation: flames 15s infinite linear;
+    animation: flames 66s infinite linear;
 }
 
 @keyframes flames {
