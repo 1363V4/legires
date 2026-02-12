@@ -157,7 +157,7 @@ a:hover {
     background-image: url('../img/splash.svg');
     mix-blend-mode: difference;
     border-radius: 50%;
-    filter: blur(3px);
+    filter: blur(10px);
     background-color: #aaaaaa;
     background-position-y: 0px;
 }
